@@ -494,3 +494,44 @@ img {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
+/* Ajuste no item pai para o dropdown não flutuar errado */
+.header_menu ul li.dropdown {
+  position: relative;
+}
+
+/* Menu Dropdown - Visual Desktop */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fec63e; /* Mesma cor do header */
+  min-width: 160px;
+  padding: 0;
+  z-index: 1000;
+  list-style: none;
+  border: 3px solid #000; /* Borda preta para seguir o estilo */
+  border-top: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  display: block !important; /* Força um embaixo do outro */
+  margin: 0 !important;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px !important;
+  display: block;
+  color: #000 !important;
+  text-align: left;
+}
+
+.dropdown-menu li a:hover {
+  background: #000;
+  color: #fff !important;
+}
